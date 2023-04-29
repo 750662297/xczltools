@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "tools",
+  "pattern": [
+    "WW ",
+    "WW ",
+    " W "
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "result": {
+    "item": "xczltools:temp_tool"
+  }
+}

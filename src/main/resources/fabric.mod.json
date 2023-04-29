@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "xczltools",
+  "version": "${version}",
+  "name": "xczltools",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/29394/xczltools"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/xczltools/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "xczl.xczltools.client.XczltoolsClient"
+    ],
+    "main": [
+      "xczl.xczltools.Xczltools"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
