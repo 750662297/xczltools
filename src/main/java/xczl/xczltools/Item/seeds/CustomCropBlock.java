@@ -6,7 +6,7 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import xczl.xczltools.Item.ModBlock;
-import xczl.xczltools.Item.Tools.SuperToolMaterial;
+import xczl.xczltools.Item.ModItem;
 
 public class CustomCropBlock extends CropBlock {
 
@@ -28,7 +28,7 @@ public class CustomCropBlock extends CropBlock {
     }
 
     public ItemConvertible getSeedItem(){
-        return ModBlock.CROP_BLOCK;
+        return ModItem.TEMP_SEED;
     }
 
     @Override

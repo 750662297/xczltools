@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/crop",
+  "parent": "block/cross",
   "textures": {
-    "crop": "minecraft:block/crop_block_stage0"
+    "cross": "xczltools:block/growstatus/crop_block_stage0"
   }
 }

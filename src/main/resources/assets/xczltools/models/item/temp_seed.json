@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "xczltools:item/tool/temp_tool"
+    "layer0": "xczltools:item/seed/temp_seed"
   }
 }
