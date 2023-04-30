@@ -1,41 +1,48 @@
-package xczl.xczltools.Item;
+package xczl.xczltools.Item.Tools;
 
-
-import net.fabricmc.yarn.constants.MiningLevels;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.Material;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import javax.tools.Tool;
+/*
+* 集砍树，挖土，挖矿，砍人（啊不是）于一身的多用途工具
+* */
 
-//public class SuperTool extends MiningToolItem {
-//    public SuperTool(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
-//        super(material, attackDamage, attackSpeed, settings);
-//    }
-//}
 public class SuperTool extends SwordItem
 {
+    private static int damage(){ return 99;}
+//    private static float speed(){return 2.0f;};
 
-    private TagKey<Block> effectiveBlocks;
-    private float miningSpeed;
-
-    private static float speed(){return 4;};
     public SuperTool(ToolMaterial material, Settings settings) {
-        super(material,100,speed(),settings);
-//        super(material, settings);
+        super(material,damage(),0.0f,settings);
     }
 
     @Override
+    public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {
+        return true;
+    }
+
+    public float getAttackDamage() {
+        return damage();
+    }
+    @Override
     public float getMiningSpeedMultiplier(ItemStack stack, BlockState state) {
+        if (state.isOf(Blocks.COBWEB)) {
+            return 15.0f;
+        }
+        Material material = state.getMaterial();
+        if (material == Material.PLANT || material == Material.REPLACEABLE_PLANT || state.isIn(BlockTags.LEAVES) || material == Material.GOURD) {
+            return 20.0f;
+        }
+
         return getMaterial().getMiningSpeedMultiplier();
-//        return 7.0f;
-//        return state.isIn(this.effectiveBlocks) ? this.miningSpeed : 1.0f;
     }
 
     @Override

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "xczltools:block/custom_crop_block_stage0"
+    },
+    "age=1": {
+      "model": "xczltools:block/custom_crop_block_stage1"
+    },
+    "age=2": {
+      "model": "xczltools:block/custom_crop_block_stage2"
+
+  }
+}

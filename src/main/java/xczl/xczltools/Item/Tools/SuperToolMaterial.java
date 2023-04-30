@@ -1,8 +1,18 @@
-package xczl.xczltools.Item;
+package xczl.xczltools.Item.Tools;
 
-import net.minecraft.item.Items;
-import net.minecraft.item.ToolMaterial;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
+import xczl.xczltools.Item.ModItemGroup;
+import xczl.xczltools.Item.seeds.CustomCropBlock;
+import xczl.xczltools.Xczltools;
 
 public class SuperToolMaterial implements ToolMaterial {
 
@@ -25,7 +35,7 @@ public class SuperToolMaterial implements ToolMaterial {
     @Override
     public float getAttackDamage()
     {
-        return 20F;
+        return 0.0F;
     }
 
     //挖掘等级
@@ -48,4 +58,7 @@ public class SuperToolMaterial implements ToolMaterial {
     {
         return Ingredient.ofItems(Items.STONE);
     }
+
+
+
 }
