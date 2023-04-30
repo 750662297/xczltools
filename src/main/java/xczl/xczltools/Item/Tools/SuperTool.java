@@ -1,10 +1,15 @@
 package xczl.xczltools.Item.Tools;
 
+import com.google.common.collect.ImmutableMultimap;
+import com.google.common.collect.Multimap;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttribute;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.tag.BlockTags;
@@ -15,13 +20,21 @@ import net.minecraft.world.World;
 * 集砍树，挖土，挖矿，砍人（啊不是）于一身的多用途工具
 * */
 
-public class SuperTool extends SwordItem
+public class SuperTool extends ToolItem
+        implements Vanishable
 {
-    private static int damage(){ return 99;}
-//    private static float speed(){return 2.0f;};
+//    private static int damage(){ return 99;}
+    private final float attackDamage;
+    private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
     public SuperTool(ToolMaterial material, Settings settings) {
-        super(material,damage(),0.0f,settings);
+        super(material,settings);
+
+        this.attackDamage = 99.0f;
+        ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
+        builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", attackDamage, EntityAttributeModifier.Operation.ADDITION));
+        builder.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Weapon modifier", 0.0, EntityAttributeModifier.Operation.ADDITION));
+        this.attributeModifiers = builder.build();
     }
 
     @Override
@@ -30,7 +43,7 @@ public class SuperTool extends SwordItem
     }
 
     public float getAttackDamage() {
-        return damage();
+        return this.attackDamage;
     }
     @Override
     public float getMiningSpeedMultiplier(ItemStack stack, BlockState state) {
@@ -76,4 +89,11 @@ public class SuperTool extends SwordItem
         return true;
     }
 
+    @Override
+    public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
+        if (slot == EquipmentSlot.MAINHAND) {
+            return this.attributeModifiers;
+        }
+        return super.getAttributeModifiers(slot);
+    }
 }
