@@ -5,7 +5,6 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
-import xczl.xczltools.Item.ModBlock;
 import xczl.xczltools.Item.ModItem;
 
 public class CustomCropBlock extends CropBlock {

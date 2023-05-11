@@ -5,10 +5,8 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.AliasedBlockItem;
-import net.minecraft.item.FoodComponent;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -28,6 +26,7 @@ public class ModItem {
 
     public static final Item TEMP_SEED = ModItem.registerItem("temp_seed",new AliasedBlockItem(ModBlock.CROP_BLOCK,new FabricItemSettings()));
 
+    public static final Item temp_item = ModItem.registerItem("temp_storage_block",new BlockItem(ModBlock.TEMP_BLOCK,new FabricItemSettings()));
     public static void  item(){
 
     }
@@ -43,6 +42,8 @@ public class ModItem {
         {
             addItemToItemGroup(ModItemGroup.ModGroup,i);
         }
+
+//        Registry.register(Registries.ITEM, new Identifier(Xczltools.MODID, "temp_block"), new BlockItem(ModBlock.TEMP_BLOCK, new FabricItemSettings()));
     }
 
     public static void addItemToItemGroup(ItemGroup group, Item item){

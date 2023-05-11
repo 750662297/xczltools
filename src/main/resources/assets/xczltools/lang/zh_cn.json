@@ -2,5 +2,6 @@
   "item.xczltools.temp_tool": "临时工具",
   "itemGroup.xczltools.xczl_group": "山海的工具箱",
   "item.xczltools.temp_item": "六味地黄草！",
-  "item.xczltools.temp_seed": "草种子"
+  "item.xczltools.temp_seed": "草种子",
+  "block.xczltools.temp_storage_block": "临时存放盒"
 }
