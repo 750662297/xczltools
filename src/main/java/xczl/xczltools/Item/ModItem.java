@@ -27,6 +27,8 @@ public class ModItem {
     public static final Item TEMP_SEED = ModItem.registerItem("temp_seed",new AliasedBlockItem(ModBlock.CROP_BLOCK,new FabricItemSettings()));
 
     public static final Item temp_item = ModItem.registerItem("temp_storage_block",new BlockItem(ModBlock.TEMP_BLOCK,new FabricItemSettings()));
+
+    public static final Item temp_chest_item = ModItem.registerItem("temp_chest",new BlockItem(ModBlock.TEMP_CHEST_BLOCK, new FabricItemSettings()));
     public static void  item(){
 
     }

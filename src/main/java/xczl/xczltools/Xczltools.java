@@ -11,7 +11,6 @@ public class Xczltools implements ModInitializer {
 
     public static final String MODID = "xczltools";
 
-    @Override
     public void onInitialize() {
         ModItemGroup.registerItemGroup();
         ModItem.addItemsToItemGroup();

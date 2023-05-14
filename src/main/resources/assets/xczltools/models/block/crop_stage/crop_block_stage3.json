@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "xczltools:block/crop_stage/crop_block_stage3"
+  }
+}
