@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "tools",
   "pattern": [
-    "WW ",
-    "WW ",
-    " W "
+    "WW",
+    "WW"
   ],
   "key": {
     "W": {
-      "tag": "minecraft:logs"
+      "item": "minecraft:wheat_seeds"
     }
   },
   "result": {
-    "item": "xczltools:temp_tool"
+    "item": "xczltools:temp_seed",
+    "count": 8
   }
 }

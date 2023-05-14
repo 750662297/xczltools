@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "xczltools:block/temp_storage_block"
+    }
+  }
+}

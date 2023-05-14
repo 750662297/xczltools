@@ -1,6 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "xczltools:block/growstatus/crop_block_stage0"
-  }
-}
