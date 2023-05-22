@@ -20,7 +20,14 @@ import java.util.Vector;
 public class ModItem {
     private static final Vector<Item> vec=new Vector<Item>();
 
-    public static final Item TEMP_TOOL = ModItem.registerItem("temp_tool", new SuperTool(SuperToolMaterial.INSTANCE, new FabricItemSettings()));
+    //super tools部分
+    public static final Item WOOD_TOOL = ModItem.registerItem("wooden_tool", new SuperTool(SuperToolMaterial.WOOD_INSTANCE, new FabricItemSettings()));
+    public static final Item STONE_TOOL = ModItem.registerItem("stone_tool", new SuperTool(SuperToolMaterial.STONE_INSTANCE, new FabricItemSettings()));
+    public static final Item IRON_TOOL = ModItem.registerItem("iron_tool", new SuperTool(SuperToolMaterial.IRON_INSTANCE, new FabricItemSettings()));
+    public static final Item GOLD_TOOL = ModItem.registerItem("golden_tool", new SuperTool(SuperToolMaterial.GOLD_INSTANCE, new FabricItemSettings()));
+    public static final Item DIAMOND_TOOL = ModItem.registerItem("diamond_tool", new SuperTool(SuperToolMaterial.DIAMOND_INSTANCE, new FabricItemSettings()));
+    public static final Item NETHERITE_TOOL = ModItem.registerItem("netherite_tool", new SuperTool(SuperToolMaterial.NETHERITE_INSTANCE, new FabricItemSettings()));
+    public static final Item TEMP_TOOL = ModItem.registerItem("temp_tool", new SuperTool(SuperToolMaterial.TEMP_INSTANCE, new FabricItemSettings()));
 
     public static final Item TEMP_ITEM = ModItem.registerItem("temp_item",new TestFood(new FabricItemSettings()));
 

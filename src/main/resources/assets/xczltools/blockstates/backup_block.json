@@ -1,0 +1,8 @@
+{
+  "variants": {
+    //    "facing=north": { "model": "xczltools:block/temp_chest", "uvlock": true },
+    //    "facing=east":  { "model": "xczltools:block/temp_chest", "y":  90, "uvlock": true },
+    //    "facing=south": { "model": "xczltools:block/temp_chest", "y": 180, "uvlock": true },
+    //    "facing=west":  { "model": "xczltools:block/temp_chest", "y": 270, "uvlock": true }
+  }
+}

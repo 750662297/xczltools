@@ -2,13 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "tools",
   "pattern": [
-    "WW ",
-    "WW ",
-    " W "
+    " W ",
+    "WWW",
+    " # "
   ],
   "key": {
     "W": {
-      "tag": "minecraft:logs"
+      "item": "xczltools:netherite_tool"
+    },
+    "#": {
+      "item": "minecraft:stick"
     }
   },
   "result": {

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "tools",
+  "pattern": [
+    " S ",
+    "AWP",
+    " # "
+  ],
+  "key": {
+    "W": {
+      "item": "xczltools:iron_tool"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "minecraft:golden_axe"
+    },
+    "P": {
+      "item": "minecraft:golden_pickaxe"
+    },
+    "S": {
+      "item": "minecraft:golden_sword"
+    }
+  },
+  "result": {
+    "item": "xczltools:golden_tool"
+  }
+}

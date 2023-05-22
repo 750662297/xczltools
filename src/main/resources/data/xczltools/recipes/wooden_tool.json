@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "tools",
+  "pattern": [
+    " S ",
+    "AWP",
+    " # "
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:planks"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "minecraft:wooden_axe"
+    },
+    "P": {
+      "item": "minecraft:wooden_pickaxe"
+    },
+    "S": {
+      "item": "minecraft:wooden_sword"
+    }
+  },
+  "result": {
+    "item": "xczltools:wooden_tool"
+  }
+}

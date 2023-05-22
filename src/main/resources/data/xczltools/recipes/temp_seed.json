@@ -2,16 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "category": "tools",
   "pattern": [
-    "WW",
-    "WW"
+    "WG"
   ],
   "key": {
     "W": {
       "item": "minecraft:wheat_seeds"
+    },
+    "G": {
+      "item": "minecraft:gold_nugget"
     }
   },
   "result": {
     "item": "xczltools:temp_seed",
-    "count": 8
+    "count": 1
   }
 }

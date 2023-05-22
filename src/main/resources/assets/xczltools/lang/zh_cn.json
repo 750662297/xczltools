@@ -1,5 +1,12 @@
 {
   "item.xczltools.temp_tool": "临时工具",
+  "item.xczltools.wooden_tool": "木制工具",
+  "item.xczltools.stone_tool": "石制工具",
+  "item.xczltools.iron_tool": "铁制工具",
+  "item.xczltools.golden_tool": "金制工具",
+  "item.xczltools.diamond_tool": "钻石工具",
+  "item.xczltools.netherite_tool": "合金工具",
+
   "itemGroup.xczltools.xczl_group": "山海的工具箱",
   "item.xczltools.temp_item": "六味地黄草！",
   "item.xczltools.temp_seed": "草种子",

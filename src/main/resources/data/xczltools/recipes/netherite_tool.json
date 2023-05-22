@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "tools",
+  "pattern": [
+    " S ",
+    "AWP",
+    " # "
+  ],
+  "key": {
+    "W": {
+      "item": "xczltools:diamond_tool"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "minecraft:netherite_axe"
+    },
+    "P": {
+      "item": "minecraft:netherite_pickaxe"
+    },
+    "S": {
+      "item": "minecraft:netherite_sword"
+    }
+  },
+  "result": {
+    "item": "xczltools:netherite_tool"
+  }
+}

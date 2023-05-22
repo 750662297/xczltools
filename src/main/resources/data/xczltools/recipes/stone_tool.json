@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "tools",
+  "pattern": [
+    " S ",
+    "AWP",
+    " # "
+  ],
+  "key": {
+    "W": {
+      "item": "xczltools:wooden_tool"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "minecraft:stone_axe"
+    },
+    "P": {
+      "item": "minecraft:stone_pickaxe"
+    },
+    "S": {
+      "item": "minecraft:stone_sword"
+    }
+  },
+  "result": {
+    "item": "xczltools:stone_tool"
+  }
+}
