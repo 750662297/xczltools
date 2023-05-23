@@ -2,6 +2,7 @@ package xczl.xczltools.Item.Tools;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
@@ -23,14 +24,13 @@ import net.minecraft.world.World;
 public class SuperTool extends ToolItem
         implements Vanishable
 {
-//    private static int damage(){ return 99;}
     private final float attackDamage;
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
     public SuperTool(ToolMaterial material, Settings settings) {
         super(material,settings);
 
-        this.attackDamage = 99.0f;
+        this.attackDamage = material.getAttackDamage();
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
         builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", attackDamage, EntityAttributeModifier.Operation.ADDITION));
         builder.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Weapon modifier", 0.0, EntityAttributeModifier.Operation.ADDITION));
@@ -74,17 +74,16 @@ public class SuperTool extends ToolItem
 
     @Override
     public boolean isSuitableFor(BlockState state) {
-//        int i = this.getMaterial().getMiningLevel();
-//        if (i < MiningLevels.DIAMOND && state.isIn(BlockTags.NEEDS_DIAMOND_TOOL)) {
-//            return false;
-//        }
-//        if (i < MiningLevels.IRON && state.isIn(BlockTags.NEEDS_IRON_TOOL)) {
-//            return false;
-//        }
-//        if (i < MiningLevels.STONE && state.isIn(BlockTags.NEEDS_STONE_TOOL)) {
-//            return false;
-//        }
-//        return state.isIn(this.effectiveBlocks);
+        int i = this.getMaterial().getMiningLevel();
+        if (i < MiningLevels.DIAMOND && state.isIn(BlockTags.NEEDS_DIAMOND_TOOL)) {
+            return false;
+        }
+        if (i < MiningLevels.IRON && state.isIn(BlockTags.NEEDS_IRON_TOOL)) {
+            return false;
+        }
+        if (i < MiningLevels.STONE && state.isIn(BlockTags.NEEDS_STONE_TOOL)) {
+            return false;
+        }
 
         return true;
     }
